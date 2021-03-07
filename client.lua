@@ -13,7 +13,7 @@ CreateThread(function()
 
     while true do
         Wait(500)
-        local dist = Vdist(GetEntityCoords(PlayerPedId()), location)
+        local dist = #(GetEntityCoords(PlayerPedId()) - location)
         if dist < 2.5 and not status then
             status = true
             drawTxt(dist.x, dist.y, dist.z, "[E] Banks!")
